@@ -5,18 +5,18 @@
 
 'use strict';
 
-angular.module('mostPopularListingsApp.login', ['ngRoute'])
+angular.module('homesInternalToolsApp.home', ['ngRoute'])
 
 // Routing configuration for this module
 .config(['$routeProvider',function($routeprovider){
-	$routeprovider.when('/login', {
-		controller: 'LoginController',
-		templateUrl: 'components/views/loginView.html'
+	$routeprovider.when('/', {
+		controller: 'HomeController',
+		templateUrl: 'components/home/homeView.html'
 	});
 }])
 
 // Controller definition for this module
-.controller('LoginController', ['$scope', function($scope) {
+.controller('HomeController', ['$scope', function($scope) {
 
 	// Just a housekeeping.
 	// In the init method we are declaring all the
@@ -28,6 +28,6 @@ angular.module('mostPopularListingsApp.login', ['ngRoute'])
 	
 	};
 
-	this.message = "Login Time!";
+	this.message = "Hello Home!";
 
 }]);

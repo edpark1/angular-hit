@@ -5,18 +5,18 @@
 
 'use strict';
 
-angular.module('mostPopularListingsApp.about', ['ngRoute'])
+angular.module('homesInternalToolsApp.salestool', ['ngRoute'])
 
 // Routing configuration for this module
 .config(['$routeProvider',function($routeprovider){
-	$routeprovider.when('/about', {
-		controller: 'AboutController',
-		templateUrl: 'components/views/aboutView.html'
+	$routeprovider.when('/salestool', {
+		controller: 'SalesToolController',
+		templateUrl: 'components/salestool/salesToolView.html'
 	});
 }])
 
 // Controller definition for this module
-.controller('AboutController', ['$scope', function($scope) {
+.controller('SalesToolController', ['$scope', function($scope) {
 
 	// Just a housekeeping.
 	// In the init method we are declaring all the
@@ -28,6 +28,6 @@ angular.module('mostPopularListingsApp.about', ['ngRoute'])
 	
 	};
 
-	this.message = "Hello About!";
+	this.message = "Hello SalesTool!";
 
 }]);
